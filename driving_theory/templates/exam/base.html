@@ -18,7 +18,7 @@
     {% block pagecontent %}
     {% endblock %}
     {% include 'partials/footer.html' %} 
-    <script src="{% static 'js/jquery.com_jquery-3.7.1.js' %}"></script>
+    {% comment %} <script src="{% static 'js/jquery.com_jquery-3.7.1.js' %}"></script> {% endcomment %}
     <script src="{% static 'script.js' %}"></script>
     {% comment %} <script src="{% static 'js/bootstrap.bundle.js' %}"></script> <!-- This is how to include a static file -->
     <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>  {% endcomment %}
