@@ -5,6 +5,11 @@
 
 {% block extra_head %}
 <link rel="stylesheet" href="/static/style.css" />
+{% comment %} <link rel="stylesheet" href="/static/basic_pages.css"> {% endcomment %}
+
+{% comment %} <script src="/static/script.js"></script>  {% endcomment %}
+{% comment %} <script src={% static "script.js" %}></script>  {% endcomment %}
+
 {% endblock %} 
 
 {% block pagecontent %}
@@ -12,6 +17,5 @@
   <h2>Choose your language</h2>
   <form id="lang-form"></form>
   <button id="lang-btn">Submit</button>
-  <script src="/static/script.js"></script>
 </div>
 {% endblock %}

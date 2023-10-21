@@ -10,7 +10,7 @@ let curr_question = 0;
 
 async function getAllLanguages() {
     try {
-        const url = "http://127.0.0.1:8000/exam/languages/";
+        const url = "/exam/languages/";
         const response = await fetch(url);
         if (!response.ok) {
             throw new Error("Couldn`t get languages");
@@ -48,7 +48,7 @@ async function getQuestions() {
         }
     }
 
-    const url = `http://127.0.0.1:8000/exam/get-exam-questions/${language}`;
+    const url = `/exam/get-exam-questions/${language}`;
     try {
         const response = await fetch(url);
         if (!response.ok) {
@@ -178,7 +178,7 @@ function renderQuestionText(parent, question) {
 async function displayImg(parent, imageId) {
     try {
         if (imageId) {
-            const url = `http://127.0.0.1:8000/exam/get-img/${imageId}`;
+            const url = `/exam/get-img/${imageId}`;
             const response = await fetch(url);
 
             if (!response.ok) {
@@ -296,7 +296,7 @@ function addButtonToList(
 async function displayImg(element, image_id) {
     try {
         if (image_id) {
-            const url = `http://127.0.0.1:8000/exam/get-img/${image_id}`;
+            const url = `/exam/get-img/${image_id}`;
             const response = await fetch(url);
             if (!response.ok) {
                 throw new Error("Couldn`t get languages");
