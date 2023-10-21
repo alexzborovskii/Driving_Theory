@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 import os
 from pathlib import Path
 from dotenv import load_dotenv
+import mimetypes
 load_dotenv()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -27,10 +28,8 @@ SECRET_KEY = os.getenv("SECRET_KEY"),
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
-if DEBUG:
-    import mimetypes
-    mimetypes.add_type("application/javascript", ".js", True)
-    mimetypes.add_type("text/css", ".css", True)
+mimetypes.add_type("application/javascript", ".js", True)
+mimetypes.add_type("text/css", ".css", True)
 
 ALLOWED_HOSTS = ['*']
 
