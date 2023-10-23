@@ -153,6 +153,9 @@ CORS_ORIGIN_ALLOW_ALL = True  # Set this to True to allow all origins
 CORS_ORIGIN_WHITELIST = [
     'http://localhost:8000',
     'http://127.0.0.1:8000',
+    'http://13.228.225.19',
+    'http://18.142.128.26',
+    'http://54.254.162.138',
     'https://driving-theory.onrender.com/' # Add your allowed front-end origins here
 ]
 
