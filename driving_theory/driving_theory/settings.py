@@ -151,7 +151,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CORS_ORIGIN_ALLOW_ALL = True  # Set this to True to allow all origins
 CORS_ORIGIN_WHITELIST = [
-    'http://localhost:8000'  # Add your allowed front-end origins here
+    'http://localhost:8000',
+    'https://driving-theory.onrender.com/' # Add your allowed front-end origins here
 ]
 
 LOGGING = {

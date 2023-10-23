@@ -10,6 +10,7 @@ let curr_question = 0;
 
 async function getAllLanguages() {
     try {
+        console.log("url: ", url)
         const url = "/exam/languages/";
         const response = await fetch(url);
         if (!response.ok) {
