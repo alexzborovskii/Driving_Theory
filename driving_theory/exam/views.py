@@ -142,6 +142,7 @@ class HomePageView(TemplateView):
 class ExamPageView(LoginRequiredMixin, TemplateView):
     template_name = "./exam/exam.html"    
     login_url = "/exam/login/"
+    redirect_field_name = "redirect_to"
 
 class ResultsView(LoginRequiredMixin ,TemplateView):
     template_name = "./exam/results.html"
