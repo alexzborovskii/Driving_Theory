@@ -19,12 +19,15 @@ from django.urls import path, include
 from exam.views import HomePageView
 from django.conf.urls.static import static
 from django.conf import settings
+from django.urls import path, include, re_path
+from django.views.static import serve
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api-auth/', include('rest_framework.urls') ),
     path('exam/', include('exam.urls') ),
     path('', HomePageView.as_view(), name='index'),
+    re_path(r'^static/(?P<path>.*)$', serve, {'document_root':settings.STATIC_ROOT}),
 ]
 
 if settings.DEBUG:
