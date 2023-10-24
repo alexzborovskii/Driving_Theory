@@ -10,9 +10,9 @@ let curr_question = 0;
 
 async function getAllLanguages() {
     try {
-        console.log("url: ", url)
-        const url = "https://driving-theory.onrender.com/exam/languages/";
-        const response = await fetch(url);
+        const url = "/exam/languages/";
+        const response = await fetch("https://driving-theory.onrender.com/exam/languages/");
+        console.log("response: ", response)
         if (!response.ok) {
             throw new Error("Couldn`t get languages");
         } else {
@@ -498,6 +498,6 @@ function createAnswerLabel(answer, index, i) {
 }
 
 /* Run */
-
+console.log("SCRIPT STARTED")
 getAllLanguages();
 langBtn.addEventListener("click", getQuestions);
