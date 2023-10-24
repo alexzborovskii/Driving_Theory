@@ -11,7 +11,7 @@ let curr_question = 0;
 async function getAllLanguages() {
     try {
         console.log("url: ", url)
-        const url = "/exam/languages/";
+        const url = "https://driving-theory.onrender.com/exam/languages/";
         const response = await fetch(url);
         if (!response.ok) {
             throw new Error("Couldn`t get languages");
